@@ -14,6 +14,13 @@ to install:
 
     $ git clone git@github.com:wandrewkeech/gulp-pugitude
 
+Then move the contents of the new `gulp-pugitude/` folder up a directory so it's
+in your project directory (how you actually wanted it):
+    
+    $ cd gulp-pugitude/
+    $ mv ./* ../
+    $ rm -r gulp-pugitude/
+
 ##Useage
 Generating the demo content is done with a straight-forward
 
