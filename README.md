@@ -1,4 +1,9 @@
 ##Gulp-Pugitude
+
+I've messed up with the packaging, and in testing any method to reproduce a
+working build everything breaks. Don't use this repo or any install method for
+now.
+
 ~~__The easy-to-use Static Site Generator that uses Pug, Sass, and Live-Server with Gulp.__
 
 The content in this repository will be mostly the `gulpfile`, `pug` template demos,
