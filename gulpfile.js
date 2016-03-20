@@ -10,16 +10,18 @@ var sass = require('gulp-sass');
 var uglify = require('gulp-uglify');
  
 var liveServerParams = {   //** FIX-ME **  auto-refresh in the browser does not function
-	root: "./output/", // Set root directory that's being server. If left black, defaults
+	root: "./build/html/",  // Set root directory that's being server. If left black, defaults
                            // wherever 'gulp' command was issued. 
-	ignore: './output/html/layouts', // comma-separated string for paths to ignore - Does
+	ignore: './build/html/layouts',  // comma-separated string for paths to ignore - Does
                                          // not work for some reason.
 };
 
 
-gulp.task('liveserver', function(){      // Required gulp.task definition to call later
-    liveServer.start(liveServerParams);
-});
+// gulp.task('liveserver', function(){      // Required gulp.task definition to call later
+//     liveServer.start(liveServerParams);  // 
+// });                                      // ** Actually might work better
+//                                               without the gulp.task
+//                                               invocation?
 
 gulp.task('sass', function(){
     return gulp.src('./src/scss/**/*.scss')
@@ -28,7 +30,7 @@ gulp.task('sass', function(){
         .pipe(gulp.dest('./output/css/'))
         .pipe(cleancss())
         .pipe(rename({suffix: '.min'}))
-        .pipe(gulp.dest('./output/css/'))
+        .pipe(gulp.dest('./build/css/'))
 });
 
 gulp.task('jade', function(){
@@ -37,21 +39,21 @@ gulp.task('jade', function(){
             jade : jade,
             pretty: true
         }))
-        .pipe(gulp.dest('./output/html/'))
+        .pipe(gulp.dest('./build/html/'))
 });
 
 gulp.task('javascript', function(){
     gulp.src('./src/js/**/*.js')
         .pipe(concat('app.js'))
-        .pipe(gulp.dest('output/js/'))
+        .pipe(gulp.dest('./build/js/'))
         .pipe(uglify())
         .pipe(rename({suffix: '.min'}))
-        .pipe(gulp.dest('./output/js/'));
+        .pipe(gulp.dest('./build/js/'));
 });
 
 gulp.task('default', ['jade', 'javascript', 'sass'], function () {
     gulp.watch('src/jade/**/*.jade', ['jade'])
     gulp.watch('src/js/**/*.js', ['javascript'])
     gulp.watch('src/scss/*.scss', ['sass'])
-    liveServer.start(liveServerParams);
+    liveServer.start(liveServerParams); // As replacement for using the gulp.task('live-server')
 });
