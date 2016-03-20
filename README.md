@@ -11,12 +11,12 @@ with a tool like the wonderful https://github.com/creationix/nvm ). Then create
 a project directory, and use npm
 to install:
 
-    npm install gulp-pugitude
+    $ npm install gulp-pugitude
 
 ##Useage
 Generating the demo content is done with a straight-forward
 
-    gulp
+    $ gulp
 
 which should build all the content first (which automatically mirrors the
 structure of your source directory tree), watch all source directories, fire up
