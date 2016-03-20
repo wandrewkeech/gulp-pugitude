@@ -25,7 +25,7 @@ quickly in your browser window (as soon as I fix the bug with running
 `live-server` from within `gulp`).
 
 ##Issues
- - [ ] Build a comprehensive demo of 'pug' features and use in the demo project
+ - [ ] Build a comprehensive demo of `pug` features and use in the demo project
  - [ ] Build a `sass` theme for the demo project (likely borrow from
 http://www.jade-lang.com ) 
  - [ ] Get automatic refresh in browser with live-server working with `gulp`
