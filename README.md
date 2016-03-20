@@ -1,5 +1,5 @@
 ##Gulp-Pugitude
-__The easy-to-use Static Site Generator that uses Pug, Sass, and Live-Server with Gulp.__
+~~__The easy-to-use Static Site Generator that uses Pug, Sass, and Live-Server with Gulp.__
 
 The content in this repository will be mostly the `gulpfile`, `pug` template demos,
 and a wiki perhaps?
@@ -38,4 +38,4 @@ quickly in your browser window (as soon as I fix the bug with running
  - [ ] Build a `sass` theme for the demo project (likely borrow from
 http://www.jade-lang.com ) 
  - [ ] Get automatic refresh in browser with live-server working with `gulp`
-_much more than that too I'm sure_
+_much more than that too I'm sure_~~

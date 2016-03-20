@@ -1,6 +1,6 @@
 {
   "name": "gulp-pugitude",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Easy Static Site Builder with Pug (Jade), Sass, and Live-Server",
   "main": "gulpfile.js",
   "dependencies": {},
