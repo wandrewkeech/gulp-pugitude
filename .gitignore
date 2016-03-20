@@ -1,3 +1,2 @@
 # Git Ignore output stuff
-/output/*
-sassline/
+output/
