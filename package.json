@@ -1,36 +1,28 @@
 {
   "name": "gulp-pugitude",
-  "version": "0.1.1",
-  "description": "Easy Static Site Builder with Jade (pug), Sass, and Live-Server",
-  "main": "index.js",
+  "version": "0.1.2",
+  "description": "Easy Static Site Builder with Pug (Jade), Sass, and Live-Server",
+  "main": "gulpfile.js",
+  "dependencies": {},
+  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Andy Keech",
-  "license": "ISC",
-  "devDependencies": {
-    "gulp": "^3.9.1",
-    "gulp-batch": "^1.0.5",
-    "gulp-clean-css": "^2.0.3",
-    "gulp-concat": "^2.6.0",
-    "gulp-dest": "^0.2.3",
-    "gulp-jade": "^1.1.0",
-    "gulp-rename": "^1.2.2",
-    "gulp-sass": "^2.2.0",
-    "gulp-uglify": "^1.5.3",
-    "live-server": "^0.9.2"
-  },
-  "dependencies": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/wandrewkeech/gulp-pugitude.git"
   },
   "keywords": [
     "gulp",
-    "static",
-    "generator",
-    "simple"
+    "jade",
+    "pug",
+    "sass",
+    "live-server",
+    "easy",
+    "minimal"
   ],
+  "author": "Andy Keech <w.andrew.keech@gmail.com> (http://www.github.com/wandrewkeech)",
+  "license": "ISC",
   "bugs": {
     "url": "https://github.com/wandrewkeech/gulp-pugitude/issues"
   },

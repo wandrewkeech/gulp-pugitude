@@ -5,13 +5,14 @@ The content in this repository will be mostly the `gulpfile`, `pug` template dem
 and a wiki perhaps?
 
 ##Installation
-Cloning this repo is probably not the best idea (so you don't need to
-disentangle your project from this one). First install NodeJS (I suggest
+Cloning this repo is probably ~~not~~ the best idea ~~(so you don't need to
+disentangle your project from this one)~~, because I'm a scrub who can't package
+npm modules yet. First install NodeJS (I suggest
 with a tool like the wonderful https://github.com/creationix/nvm ). Then create
-a project directory, and use npm
+a project directory, and use git
 to install:
 
-    $ npm install gulp-pugitude
+    $ git clone git@github.com:wandrewkeech/gulp-pugitude
 
 ##Useage
 Generating the demo content is done with a straight-forward
