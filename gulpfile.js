@@ -2,8 +2,8 @@ var cleancss = require('gulp-clean-css');
 var concat = require('gulp-concat');
 var dest = require('gulp-dest');
 var gulp = require('gulp');
-var gulpJade = require('gulp-jade');
-var jade = require('jade');
+var gulpJade = require('gulp-pug');
+var pug = require('pug');
 var liveServer = require("live-server");
 var rename = require('gulp-rename');
 var sass = require('gulp-sass');
@@ -33,10 +33,10 @@ gulp.task('sass', function(){
         .pipe(gulp.dest('./build/css/'))
 });
 
-gulp.task('jade', function(){
-    return gulp.src('./src/jade/**/*.jade')
+gulp.task('pug', function(){
+    return gulp.src('./src/pug/**/*.pug')
         .pipe(gulpJade({
-            jade : jade,
+            pug : pug,
             pretty: true
         }))
         .pipe(gulp.dest('./build/html/'))
@@ -51,8 +51,8 @@ gulp.task('javascript', function(){
         .pipe(gulp.dest('./build/js/'));
 });
 
-gulp.task('default', ['jade', 'javascript', 'sass'], function () {
-    gulp.watch('src/jade/**/*.jade', ['jade'])
+gulp.task('default', ['pug', 'javascript', 'sass'], function () {
+    gulp.watch('src/pug/**/*.pug', ['pug'])
     gulp.watch('src/js/**/*.js', ['javascript'])
     gulp.watch('src/scss/*.scss', ['sass'])
     liveServer.start(liveServerParams); // As replacement for using the gulp.task('live-server')

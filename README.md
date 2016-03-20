@@ -19,6 +19,7 @@ in your project directory (how you actually wanted it):
     
     $ cd gulp-pugitude/
     $ mv ./* ../
+    $ cd ../
     $ rm -r gulp-pugitude/
 
 ##Useage

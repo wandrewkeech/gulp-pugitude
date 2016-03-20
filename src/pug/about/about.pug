@@ -1,0 +1,22 @@
+// Test for Including into Main template
+extends ../layouts/main.jade
+
+block title
+    title Up Here in the Title Bar We Can Put Whatever We Want, Per-Page
+
+block content
+    body
+    h3#aboutTitle Here's the About section: Pugitude
+    p.
+        Pugitude is all about putting together the straight-forward static
+        site generator that I wish already existed. Where most any other 
+        offering is oriented toward blog content, Pugitude makes no assumptions
+        about your content, so there's no opinion to work around. I wanted
+        to make a generator that would allow making portfolio or gallery sites
+        sensible and streamlined.
+    p.
+        If you check the source file in `./src/jade/about/about.jade` you'll
+        see this content was written in `Markdown` and run through Pug's
+        internal processor.
+:markdown
+    Here is some text in markdown
