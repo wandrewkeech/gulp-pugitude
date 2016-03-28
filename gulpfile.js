@@ -1,16 +1,17 @@
-var cleancss = require('gulp-clean-css');
-var concat = require('gulp-concat');
-var dest = require('gulp-dest');
-var gulp = require('gulp');
-var gulpJade = require('gulp-pug');
-var pug = require('pug');
-var liveServer = require("live-server");
-var rename = require('gulp-rename');
-var sass = require('gulp-sass');
-var uglify = require('gulp-uglify');
+var cleancss   = require('gulp-clean-css');
+var concat     = require('gulp-concat');
+var dest       = require('gulp-dest');
+var gulp       = require('gulp');
+var gulpPug    = require('gulp-pug');
+var jade       = require('pug');
+var liveServer = require('gulp-live-server');
+var path       = require('path');
+var rename     = require('gulp-rename');
+var sass       = require('gulp-sass');
+var uglify     = require('gulp-uglify');
  
 var liveServerParams = {   //** FIX-ME **  auto-refresh in the browser does not function
-	root: "./build/html/",  // Set root directory that's being server. If left black, defaults
+	root: './build/html/',  // Set root directory that's being server. If left black, defaults
                            // wherever 'gulp' command was issued. 
 	ignore: './build/html/layouts',  // comma-separated string for paths to ignore - Does
                                          // not work for some reason.
@@ -27,7 +28,7 @@ gulp.task('sass', function(){
     return gulp.src('./src/scss/**/*.scss')
         .pipe(sass({style: 'expanded'}))
         .on('error', sass.logError)
-        .pipe(gulp.dest('./output/css/'))
+        .pipe(gulp.dest('./build/css/'))
         .pipe(cleancss())
         .pipe(rename({suffix: '.min'}))
         .pipe(gulp.dest('./build/css/'))
@@ -35,9 +36,10 @@ gulp.task('sass', function(){
 
 gulp.task('pug', function(){
     return gulp.src('./src/pug/**/*.pug')
-        .pipe(gulpJade({
-            pug : pug,
-            pretty: true
+        .pipe(gulpPug({
+            filename: ".pug",
+            pretty: true,
+            basedir: './'
         }))
         .pipe(gulp.dest('./build/html/'))
 });
@@ -52,8 +54,8 @@ gulp.task('javascript', function(){
 });
 
 gulp.task('default', ['pug', 'javascript', 'sass'], function () {
-    gulp.watch('src/pug/**/*.pug', ['pug'])
-    gulp.watch('src/js/**/*.js', ['javascript'])
-    gulp.watch('src/scss/*.scss', ['sass'])
+   gulp.watch('./src/pug/**/*.pug', ['pug'])
+    gulp.watch('./src/js/**/*.js', ['javascript'])
+    gulp.watch('./src/scss/*.scss', ['sass'])
     liveServer.start(liveServerParams); // As replacement for using the gulp.task('live-server')
 });
