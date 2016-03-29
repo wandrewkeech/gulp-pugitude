@@ -2,13 +2,20 @@
 
 ####The easy-to-use Static Site Generator that uses Pug (jade-lang), Sass, and Live-Server with Gulp
 
-The content in this repository will be mostly the `gulpfile`, `pug` template demos, and a wiki perhaps.
-So far I am still learning how to package with npm (this is a spare time
-project, and I'm no professional and have no idea what I'm doing).
+The content in this repository will be mostly the `gulpfile`, `pug` template
+demos, and a wiki perhaps.  So far I am still learning how to package with npm
+(this is a spare time project, and I'm no professional and have no idea what I'm
+doing).
+
+Pugitude is all about putting together the straight-forward static site
+generator that I wish already existed.  Where most any other offering is
+oriented toward blog content, Pugitude makes no assumptions about your content,
+so there's no opinion to work around.  I wanted to make a generator that would
+allow making portfolio or gallery sites sensible and streamlined.
 
 ##Installation
 Cloning this repo is probably the best idea. First install NodeJS (I suggest
-with a tool like the wonderful [nvm](https://github.com/creationix/nvm) ). Then create
+with a tool like the wonderful [nvm](https://github.com/creationix/nvm)). Then create
 a project directory, and use git to install:
 ```bash
     $ git clone git@github.com:wandrewkeech/gulp-pugitude
@@ -43,9 +50,11 @@ quickly in your browser window (as soon as I fix the bug with running
  - [ ] Build a `sass` theme for the demo project (likely borrow from
 http://www.jade-lang.com ) 
  - [ ] Get automatic refresh in browser with live-server working with `gulp`
- - [ ] Perhaps have an error-catching call back to prevent gulp from exiting on
+ - [ ] Perhaps have an error-catching call back to prevent `gulp` from exiting on
    a `pug` rendering error, if the user saves with a typo (or other syntax
    problems)
+ - [ ] Follow-up on the declared deprecations in the `gulp` stack
+ - [ ] Work on implementing the missing processing filters in `gulp-pug` that `pug` says it should be able to handle 
  - [x] De-breakify this repo as it was, and come up with a conceivable way for
    other people to try the setup out
 
