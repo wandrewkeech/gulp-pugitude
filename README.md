@@ -43,11 +43,14 @@ quickly in your browser window (as soon as I fix the bug with running
  - [ ] Build a `sass` theme for the demo project (likely borrow from
 http://www.jade-lang.com ) 
  - [ ] Get automatic refresh in browser with live-server working with `gulp`
+ - [ ] Perhaps have an error-catching call back to prevent gulp from exiting on
+   a `pug` rendering error, if the user saves with a typo (or other syntax
+   problems)
  - [x] De-breakify this repo as it was, and come up with a conceivable way for
    other people to try the setup out
 
 ##Deps and Links
- - [Live Server](https://www.npmjs.com/package/live-server)
  - [Gulp](https://www.npmjs.com/package/gulp)
+ - [Live Server](https://www.npmjs.com/package/live-server)
  - [Pug](http://www.jade-lang.com)
  - [Sass](http://www.sass-lang.com)
