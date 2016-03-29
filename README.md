@@ -47,7 +47,7 @@ http://www.jade-lang.com )
    other people to try the setup out
 
 ##Deps and Links
-[Live Server](https://www.npmjs.com/package/live-server)
-[Gulp](https://www.npmjs.com/package/gulp)
-[Pug](http://www.jade-lang.com)
-[Sass](http://www.sass-lang.com)
+ - [Live Server](https://www.npmjs.com/package/live-server)
+ - [Gulp](https://www.npmjs.com/package/gulp)
+ - [Pug](http://www.jade-lang.com)
+ - [Sass](http://www.sass-lang.com)
