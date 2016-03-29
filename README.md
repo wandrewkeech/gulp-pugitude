@@ -1,45 +1,53 @@
 ##Gulp-Pugitude
 
-I've messed up with the packaging, and in testing any method to reproduce a
-working build everything breaks. Don't use this repo or any install method for
-now.
+####The easy-to-use Static Site Generator that uses Pug (jade-lang), Sass, and Live-Server with Gulp
 
-~~The easy-to-use Static Site Generator that uses Pug, Sass, and Live-Server with Gulp.~~
+The content in this repository will be mostly the `gulpfile`, `pug` template demos, and a wiki perhaps.
+So far I am still learning how to package with npm (this is a spare time
+project, and I'm no professional and have no idea what I'm doing).
 
-~~The content in this repository will be mostly the `gulpfile`, `pug` template demos, and a wiki perhaps?~~
+##Installation
+Cloning this repo is probably the best idea. First install NodeJS (I suggest
+with a tool like the wonderful [nvm](https://github.com/creationix/nvm) ). Then create
+a project directory, and use git to install:
+```bash
+    $ git clone git@github.com:wandrewkeech/gulp-pugitude
+```
+Then move the contents of the new `gulp-pugitude/` folder up a directory so it's
+in your project directory (how you actually wanted it):
+```bash  
+    $ cd gulp-pugitude/
+    $ mv ./* ../
+    $ cd ../
+    $ rm -r gulp-pugitude/
+```
+Now finally, install a global copy of gulp (I have no idea why the in-directory
+copy does not seem to work):
+```bash
+    $ npm install -g gulp
+```
 
-##~~Installation~~
-~~Cloning this repo is probably ~~not~~ the best idea ~~(so you don't need to~~
-~~disentangle your project from this one)~~, because I'm a scrub who can't package~~
-~~npm modules yet. First install NodeJS (I suggest~~
-~~with a tool like the wonderful https://github.com/creationix/nvm ). Then create~~
-~~a project directory, and use git~~
-~~to install:~~
+##Useage
+Generating the demo content is done with a straight-forward
+```bash
+    $ gulp
+```
+which should build all the content first (which automatically mirrors the
+structure of your source directory tree), watch all source directories, fire up
+`live-server`, and open your browser. Updates will appear automatically and very
+quickly in your browser window (as soon as I fix the bug with running
+`live-server` from within `gulp`).
 
-~~    $ git clone git@github.com:wandrewkeech/gulp-pugitude~~
+##Issues
+ - [ ] Build a comprehensive demo of `pug` features and use in the demo project
+ - [ ] Build a `sass` theme for the demo project (likely borrow from
+http://www.jade-lang.com ) 
+ - [ ] Get automatic refresh in browser with live-server working with `gulp`
+ - [x] De-breakify this repo as it was, and come up with a conceivable way for
+   other people to try the setup out
 
-~~Then move the contents of the new `gulp-pugitude/` folder up a directory so it's~~
-~~in your project directory (how you actually wanted it):~~
-    
-    ~~$ cd gulp-pugitude/~~
-    ~~$ mv ./* ../~~
-    ~~$ cd ../~~
-    ~~$ rm -r gulp-pugitude/~~
-
-##~~Useage~~
-~~Generating the demo content is done with a straight-forward~~
-
-  ~~  $ gulp~~
-
-~~which should build all the content first (which automatically mirrors the~~
-~~structure of your source directory tree), watch all source directories, fire up~~
-~~`live-server`, and open your browser. Updates will appear automatically and very~~
-~~quickly in your browser window (as soon as I fix the bug with running~~
-~~`live-server` from within `gulp`).~~
-
-##~~Issues~~
- ~~- [ ] Build a comprehensive demo of `pug` features and use in the demo project~~
- ~~- [ ] Build a `sass` theme for the demo project (likely borrow from~~
-~~http://www.jade-lang.com ) ~~
- ~~- [ ] Get automatic refresh in browser with live-server working with `gulp`~~
-~~_much more than that too I'm sure_~~
+##Deps and Links
+[Live Server](https://www.npmjs.com/package/live-server)
+[Gulp](https://www.npmjs.com/package/gulp)
+[Pug](http://www.jade-lang.com)
+[Sass](http://www.sass-lang.com)
