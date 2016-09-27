@@ -9,13 +9,14 @@ var rename     = require('gulp-rename');
 var sass       = require('gulp-sass');
 var uglify     = require('gulp-uglify');
  
-var liveServerParams = {   //** FIX-ME **  auto-refresh in the browser does not function
-	root: './build/html/', // Set root directory that's being server. If left black, 
-                           // defaults to wherever 'gulp' command was issued. 
-	ignore: './build/html/layouts', // comma-separated string for paths to ignore - Does
-                                    // not work for some reason.
+//** FIX-ME **  auto-refresh in the browser does not function
+// Set root directory that's being server. If left black, 
+// defaults to wherever 'gulp' command was issued.           
+// comma-separated string for paths to ignore - Does not work for some reason.
+var liveServerParams = {   
+	root: './build/html/', 
+	ignore: './build/html/layouts', 
 };
-
 
 gulp.task('pug', function(){
     return gulp.src('./src/pug/**/*.pug')
@@ -23,8 +24,7 @@ gulp.task('pug', function(){
             filename: ".pug",
             pretty: true,
             basedir: './'  // This value is required for gulp-pug to resolve the 'include',
-                           // 'extends', etc. calls to other files in the build tree.
-        }))
+        }))                // 'extends', etc. calls to other files in the build tree.
         .on('error', swallowError)
         .pipe(gulp.dest('./build/html/'))
         .on('error', swallowError);
@@ -36,6 +36,7 @@ gulp.task('javascript', function(){
         .on('error', swallowError)
         .pipe(gulp.dest('./build/js/'))
         .pipe(uglify())
+        .on('error', swallowError)
         .pipe(rename({suffix: '.min'}))
         .pipe(gulp.dest('./build/js/'));
 });

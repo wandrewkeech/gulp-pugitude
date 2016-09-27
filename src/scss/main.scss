@@ -1,5 +1,14 @@
 $my_base_color: #ccc;
 
+html {
+    max-width: 80em;
+    margin-right: auto;
+    margin-left: 10%;
+    margin-top: 2em;
+    font-size: 11pt;
+}
+     
 body {
+    max-width: 80em;
     color: $my_base_color;
 }
