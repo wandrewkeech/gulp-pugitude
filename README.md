@@ -15,22 +15,14 @@ allow making portfolio or gallery sites sensible and streamlined.
 
 ##Installation
 Cloning this repo is probably the best idea. First install NodeJS (I suggest
-with a tool like the wonderful [nvm](https://github.com/creationix/nvm)). Then create
-a project directory, and use git to install:
+with a tool like the wonderful [nvm](https://github.com/creationix/nvm)).
+Navigate to your working directory, and use git to install:
 ```bash
     $ git clone git@github.com:wandrewkeech/gulp-pugitude
 ```
-Then move the contents of the new `gulp-pugitude/` folder up a directory so it's
-in your project directory (how you actually wanted it):
-```bash  
-    $ cd gulp-pugitude/
-    $ mv ./* ../
-    $ cd ../
-    $ rm -r gulp-pugitude/
-```
-
-Now finally, use `npm` to install the dependencies and a global copy of
-gulp (I have no idea why the in-directory copy does not seem to work):
+Then rename the new `gulp-pugitude/` folder to your project's name so it's
+how you want it. Now finally, use `npm` to install the dependencies and a global
+copy of gulp (I have no idea why the in-directory copy does not seem to work):
 ```bash 
     $ npm install --save-dev 
     $ npm install -g gulp 
