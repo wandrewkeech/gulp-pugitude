@@ -28,10 +28,12 @@ in your project directory (how you actually wanted it):
     $ cd ../
     $ rm -r gulp-pugitude/
 ```
-Now finally, install a global copy of gulp (I have no idea why the in-directory
-copy does not seem to work):
-```bash
-    $ npm install -g gulp
+
+Now finally, use `npm` to install the dependencies and a global copy of
+gulp (I have no idea why the in-directory copy does not seem to work):
+```bash 
+    $ npm install --save-dev 
+    $ npm install -g gulp 
 ```
 
 ##Useage
@@ -54,7 +56,6 @@ http://www.jade-lang.com )
    a `pug` rendering error, if the user saves with a typo (or other syntax
    problems)
  - [ ] Follow-up on the declared deprecations in the `gulp` stack
- - [ ] Work on implementing the missing processing filters in `gulp-pug` that `pug` says it should be able to handle 
  - [x] De-breakify this repo as it was, and come up with a conceivable way for
    other people to try the setup out
 
