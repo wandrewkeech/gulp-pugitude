@@ -10,10 +10,10 @@ var sass       = require('gulp-sass');
 var uglify     = require('gulp-uglify');
  
 var liveServerParams = {   //** FIX-ME **  auto-refresh in the browser does not function
-	root: './build/html/',  // Set root directory that's being server. If left black, 
-                                // defaults to wherever 'gulp' command was issued. 
-	ignore: './build/html/layouts',  // comma-separated string for paths to ignore - Does
-                                         // not work for some reason.
+	root: './build/html/', // Set root directory that's being server. If left black, 
+                           // defaults to wherever 'gulp' command was issued. 
+	ignore: './build/html/layouts', // comma-separated string for paths to ignore - Does
+                                    // not work for some reason.
 };
 
 
@@ -22,17 +22,18 @@ gulp.task('pug', function(){
         .pipe(gulpPug({
             filename: ".pug",
             pretty: true,
-            basedir: './'  // Was the key to getting the build un-broken. This value is
-                           // required for gulp-pug to resolve the 'include',
-                           // 'extends', etc. calls to other files in the build
-                           // tree.
+            basedir: './'  // This value is required for gulp-pug to resolve the 'include',
+                           // 'extends', etc. calls to other files in the build tree.
         }))
+        .on('error', swallowError)
         .pipe(gulp.dest('./build/html/'))
+        .on('error', swallowError);
 });
 
 gulp.task('javascript', function(){
     gulp.src('./src/js/**/*.js')
         .pipe(concat('app.js'))
+        .on('error', swallowError)
         .pipe(gulp.dest('./build/js/'))
         .pipe(uglify())
         .pipe(rename({suffix: '.min'}))
@@ -46,13 +47,17 @@ gulp.task('sass', function(){
         .pipe(gulp.dest('./build/css/'))
         .pipe(cleancss())
         .pipe(rename({suffix: '.min'}))
-        .pipe(gulp.dest('./build/css/'))
+        .pipe(gulp.dest('./build/css/'));
 });
-
 
 gulp.task('default', ['pug', 'javascript', 'sass'], function () {
-   gulp.watch('./src/pug/**/*.pug', ['pug'])
-    gulp.watch('./src/js/**/*.js', ['javascript'])
-    gulp.watch('./src/scss/*.scss', ['sass'])
+    gulp.watch('./src/pug/**/*.pug', ['pug']);
+    gulp.watch('./src/js/**/*.js', ['javascript']);
+    gulp.watch('./src/scss/*.scss', ['sass']);
     liveServer.start(liveServerParams); // As replacement for using the gulp.task('live-server')
 });
+
+function swallowError(error){
+    console.log(error.toString());
+    this.emit('end');
+}
