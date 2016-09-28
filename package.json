@@ -3,7 +3,7 @@
   "version": "0.1.5",
   "description": "Easy Static Site Builder with Pug (Jade), Sass, and Live-Server",
   "main": "gulpfile.js",
-  "dependencies": {    
+  "dependencies": {
     "gulp": "^3.9.1",
     "gulp-clean-css": "^2.0.3",
     "gulp-concat": "^2.6.0",
@@ -16,7 +16,9 @@
     "live-server": "^0.9.2",
     "pug": "^2.0.0-alpha1"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "vanilla-framework": "^1.0.0"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

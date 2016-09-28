@@ -34,21 +34,21 @@ gulp.task('javascript', function(){
     gulp.src('./src/js/**/*.js')
         .pipe(concat('app.js'))
         .on('error', swallowError)
-        .pipe(gulp.dest('./build/js/'))
+        .pipe(gulp.dest('./build/html/js/'))
         .pipe(uglify())
         .on('error', swallowError)
         .pipe(rename({suffix: '.min'}))
-        .pipe(gulp.dest('./build/js/'));
+        .pipe(gulp.dest('./build/html/js/'));
 });
 
 gulp.task('sass', function(){
     return gulp.src('./src/scss/**/*.scss')
-        .pipe(sass({style: 'expanded'}))
+        .pipe(sass({includePaths:['./node_modules/vanilla-framework/scss/']}))
         .on('error', sass.logError)
-        .pipe(gulp.dest('./build/css/'))
+        .pipe(gulp.dest('./build/html/css/'))
         .pipe(cleancss())
         .pipe(rename({suffix: '.min'}))
-        .pipe(gulp.dest('./build/css/'));
+        .pipe(gulp.dest('./build/html/css/'));
 });
 
 gulp.task('default', ['pug', 'javascript', 'sass'], function () {

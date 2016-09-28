@@ -1,0 +1,16 @@
+// Image grid to showcase group of images
+@mixin vf-p-inline-images {
+
+  .p-inline-images {
+    @extend %clearfix;
+    display: block;
+    list-style: none; // if list is used as wrapper
+    text-align: center;
+
+    &__img {
+      display: inline-block;
+      padding: .5rem;
+      text-align: center;
+    }
+  }
+}

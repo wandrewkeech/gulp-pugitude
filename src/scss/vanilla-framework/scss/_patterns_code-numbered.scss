@@ -1,0 +1,21 @@
+// Code and pre styles
+@mixin vf-p-code-numbered {
+
+  .p-code-numbered {
+    background: $color-light;
+    color: $color-dark;
+    counter-reset: line-numbering;
+    padding: 0 1rem;
+
+    .code-line::before {
+      content: counter(line-numbering);
+      counter-increment: line-numbering;
+      opacity: .5;
+      padding-right: 1rem; // space after numbers
+      pointer-events: none;
+      text-align: right;
+      user-select: none;
+      width: 1.5rem;
+    }
+  }
+}

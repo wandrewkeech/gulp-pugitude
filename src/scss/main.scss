@@ -1,8 +1,10 @@
-$my_base_color: #ccc;
+@import "vanilla-framework/scss/vanilla";
+
+$my_base_color: #444;
 
 html {
-    max-width: 80em;
-    margin-right: auto;
+    max-width: 50em;
+    margin-right: 10%;
     margin-left: 10%;
     margin-top: 2em;
     font-size: 11pt;

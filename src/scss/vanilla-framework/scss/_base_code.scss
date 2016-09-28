@@ -1,0 +1,32 @@
+// Base code styles
+@mixin vf-b-code {
+  code,
+  samp,
+  kbd {
+    font-family: unquote($font-monospace);
+    text-align: left;
+  }
+
+  pre,
+  code {
+    direction: ltr;
+    hyphens: none;
+    line-height: 1.5rem;
+    margin: .5rem 0;
+    tab-size: 4;
+    white-space: pre-wrap;
+    word-spacing: normal;
+    word-wrap: break-word;
+  }
+
+  pre {
+    background: $color-x-dark;
+    border: 0;
+    border-radius: .5rem;
+    color: $color-mid-dark;
+    overflow: auto;
+    padding: 1rem;
+    text-align: left;
+    text-shadow: none;
+  }
+}

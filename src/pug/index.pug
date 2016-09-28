@@ -2,6 +2,8 @@ doctype html
 html(lang='en')
     head
         title Welcome to the Pugitude Index Page
+        link(rel='stylesheet' type='text/css' href='../css/main.min.css')
+            
     body
         h1 Liveserver has started and opened your browser window
         h2 Let's start with some basics
@@ -15,7 +17,7 @@ html(lang='en')
 
           one paragraph tag. However, the line breaks show up as breaks in
           the text all the same. Let's see if we can get auto-save
-          working. Alright checking for reload again!
+          working. Sadly, `live-server` is not refreshing the browser itself
+          when run as a gulp task.
           
         a(href="galleries/gallery1.html") test
-
