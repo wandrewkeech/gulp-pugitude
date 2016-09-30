@@ -7,17 +7,24 @@ html(lang='en')
     body
         h1 Liveserver has started and opened your browser window
         h2 Let's start with some basics
-        p. 
-          This content is some
-          run on, multi-line sep
-          arated con
-          tent inside of one
+        div.row
+            div.col-4
+                p. 
+                  This content is some
+                  run on, multi-line sep
+                  arated con
+                  tent inside of one
 
-          "p." tag, which renders out into
+                  "p." tag, which renders out into
 
-          one paragraph tag. However, the line breaks show up as breaks in
-          the text all the same. Let's see if we can get auto-save
-          working. Sadly, `live-server` is not refreshing the browser itself
-          when run as a gulp task.
-          
-        a(href="galleries/gallery1.html") test
+                  one paragraph tag. However, the line breaks show up as breaks in
+                  the text all the same. Let's see if we can get auto-save
+                  working. Sadly, `live-server` is not refreshing the browser itself
+                  when run as a gulp task.
+            div.col-4
+                p.
+                    Here is some extra stuff to put in a second column, and it's really
+                    cool to see.
+            div.col-4
+                p.
+                a(href="galleries/gallery1.html") Link to templated page

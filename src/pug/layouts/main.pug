@@ -1,10 +1,12 @@
 doctype html
-html
+html(lang='en')
     head
         block title
-            title Default Title
+            title Default Title Not Overridden
         block script
-            script ../js/app.min.js
+            script ../js/app.min.js 
 
+        link(rel='stylesheet' type='text/css' href='../css/main.min.css')
+  
     body
         block content

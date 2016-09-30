@@ -10,7 +10,7 @@ var sass       = require('gulp-sass');
 var uglify     = require('gulp-uglify');
  
 //** FIX-ME **  auto-refresh in the browser does not function
-// Set root directory that's being server. If left black, 
+// Set root directory that's being server. If left blank, 
 // defaults to wherever 'gulp' command was issued.           
 // comma-separated string for paths to ignore - Does not work for some reason.
 var liveServerParams = {   
@@ -26,8 +26,7 @@ gulp.task('pug', function(){
             basedir: './'  // This value is required for gulp-pug to resolve the 'include',
         }))                // 'extends', etc. calls to other files in the build tree.
         .on('error', swallowError)
-        .pipe(gulp.dest('./build/html/'))
-        .on('error', swallowError);
+        .pipe(gulp.dest('./build/html/'));
 });
 
 gulp.task('javascript', function(){
@@ -43,7 +42,7 @@ gulp.task('javascript', function(){
 
 gulp.task('sass', function(){
     return gulp.src('./src/scss/**/*.scss')
-        .pipe(sass({includePaths:['./node_modules/vanilla-framework/scss/']}))
+        .pipe(sass({includePaths:['./node_modules/']}))
         .on('error', sass.logError)
         .pipe(gulp.dest('./build/html/css/'))
         .pipe(cleancss())
