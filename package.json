@@ -11,14 +11,10 @@
     "gulp-live-server": "^0.0.29",
     "gulp-pug": "^1.0.0",
     "gulp-rename": "^1.2.2",
-    "gulp-sass": "^2.2.0",
+    "gulp-sass": "^3.0.0",
     "gulp-uglify": "^1.5.3",
     "live-server": "^0.9.2",
     "pug": "^2.0.0-alpha1"
-  },
-  "devDependencies": {
-    "gulp-sass": "^2.3.2",
-    "node-sass": "^4.5.2"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -41,5 +37,8 @@
   "bugs": {
     "url": "https://github.com/wandrewkeech/gulp-pugitude/issues"
   },
-  "homepage": "https://github.com/wandrewkeech/gulp-pugitude#readme"
+  "homepage": "https://github.com/wandrewkeech/gulp-pugitude#readme",
+  "devDependencies": {
+    "vanilla-framework": "^1.1.11"
+  }
 }
