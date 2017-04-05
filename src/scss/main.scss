@@ -1,3 +1,36 @@
+/* IMPORTANT:   ALL OVER-RIDES OF FRAMEWORK STYLES GO ABOVE THE IMPORT LINE */
+$font_base_family: 'Aileron';
+$assets_path: './assets';
+@if str-index($font-base-family, 'Aileron') {
+    @font-face {
+      font-family: 'Aileron';
+      font-style: normal;
+      font-weight: 300;
+      src: url('#{$assets-path}/fonts/Aileron-woff/Aileron-Thin.woff') format('woff');
+    }
+
+    @font-face {
+      font-family: 'Aileron';
+      font-style: normal;
+      font-weight: 600;
+      src: url('#{$assets-path}/fonts/Aileron-woff/Aileron-Bold.woff') format('woff');
+    }
+
+    @font-face {
+      font-family: 'Aileron';
+      font-style: italic;
+      font-weight: 300;
+      src: url('#{$assets-path}/fonts/Aileron-woff/Aileron-ThinItalic.woff') format('woff');
+    }
+
+    @font-face {
+      font-family: 'Aileron';
+      font-style: italic;
+      font-weight: 600;
+      src: url('#{$assets-path}/fonts/Aileron-woff/Aileron-BoldItalic.woff') format('woff');
+    }
+}
+
 @import 'vanilla-framework/scss/build';
 
 /* latin-ext */
@@ -18,10 +51,8 @@
 }
 
 $my_base_color: #444;
-$font_base_family: 'Lekton';
 
 html {
-    font-family: 'Lekton';
     max-width: 80em;
     margin-right: 10%;
     margin-left: 10%;

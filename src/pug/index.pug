@@ -12,18 +12,18 @@ html(lang='en')
                 p. 
                   This content is some
                   run on, multi-line sep
-                  arated con
-                  tent inside of one
+                  arated <b>con
+                  tent</b> inside of one
 
                   "p." tag, which renders out into
 
                   one paragraph tag. However, the line breaks show up as breaks in
-                  the text all the same. Let's see if we can get auto-save
-                  working. Sadly, `live-server` is not refreshing the browser itself
+                  the text all the same. Sadly, `live-server` is not refreshing the browser itself
                   when run as a gulp task.
+            div.col-8
                 p.
-                    Sad that stupid dependency hell has busted using the vanilla framework.
-                    cool to see.
-            div.col-4
-                p.
+                    Here is some text in a second column. Cool to see.
+        div.row
+                p.col-6
                 a(href="galleries/gallery1.html") Link to templated page
+                p.col-6 Here is some text offset to the centre of the container div.
