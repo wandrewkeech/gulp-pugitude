@@ -5,10 +5,10 @@
   "main": "gulpfile.js",
   "dependencies": {
     "gulp": "^3.9.1",
-    "gulp-clean-css": "^2.0.3",
+    "gulp-clean-css": "^3.0",
     "gulp-concat": "^2.6.0",
     "gulp-dest": "^0.2.3",
-    "gulp-live-server": "0.0.29",
+    "gulp-live-server": "^0.0.29",
     "gulp-pug": "^1.0.0",
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^2.2.0",
@@ -17,7 +17,8 @@
     "pug": "^2.0.0-alpha1"
   },
   "devDependencies": {
-    "vanilla-framework": "^1.0.0"
+    "gulp-sass": "^2.3.2",
+    "node-sass": "^4.5.2"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

@@ -16,6 +16,7 @@ var uglify     = require('gulp-uglify');
 var liveServerParams = {   
 	root: './build/html/', 
 	ignore: './build/html/layouts', 
+    wait: 200,
 };
 
 gulp.task('pug', function(){

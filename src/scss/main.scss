@@ -1,5 +1,3 @@
-@import "vanilla-framework/scss/vanilla";
-
 /* latin-ext */
 @font-face {
   font-family: 'Lekton';
@@ -21,7 +19,7 @@ $my_base_color: #444;
 $font_base_family: 'Lekton';
 
 html {
-    font-family: 'lekton';
+    font-family: 'Lekton';
     max-width: 80em;
     margin-right: 10%;
     margin-left: 10%;

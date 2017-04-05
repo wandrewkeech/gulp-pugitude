@@ -1,6 +1,6 @@
-##Gulp-Pugitude
+## Gulp-Pugitude
 
-####The easy-to-use Static Site Generator that uses Pug (jade-lang), Sass, and Live-Server with Gulp
+#### The easy-to-use Static Site Generator that uses Pug (jade-lang), Sass, and Live-Server with Gulp
 
 The content in this repository will be mostly the `gulpfile`, `pug` template
 demos, and a wiki perhaps.  So far I am still learning how to package with npm
@@ -13,7 +13,7 @@ oriented toward blog content, Pugitude makes no assumptions about your content,
 so there's no opinion to work around.  I wanted to make a generator that would
 allow making portfolio or gallery sites sensible and streamlined.
 
-##Installation
+## Installation
 Cloning this repo is probably the best idea. First install NodeJS (I suggest
 with a tool like the wonderful [nvm](https://github.com/creationix/nvm)).
 Navigate to your working directory, and use git to install:
@@ -28,7 +28,7 @@ copy of gulp (I have no idea why the in-directory copy does not seem to work):
     $ npm install -g gulp 
 ```
 
-##Useage
+## Useage
 Generating the demo content is done with a straight-forward
 ```bash
     $ gulp
@@ -39,7 +39,7 @@ structure of your source directory tree), watch all source directories, fire up
 quickly in your browser window (as soon as I fix the bug with running
 `live-server` from within `gulp`).
 
-##Issues
+## Issues
  - [ ] Build a comprehensive demo of `pug` features and use in the demo project
  - [ ] ~~Build a `sass` theme for the demo project (likely borrow from
    http://www.jade-lang.com )~~ Use a framework like a normal person and
@@ -51,7 +51,7 @@ quickly in your browser window (as soon as I fix the bug with running
  - [x] De-breakify this repo as it was, and come up with a conceivable way for
    other people to try the setup out
 
-##Deps and Links
+## Deps and Links
  - [Gulp](https://www.npmjs.com/package/gulp)
  - [Live Server](https://www.npmjs.com/package/live-server)
  - [Pug](http://www.jade-lang.com)
