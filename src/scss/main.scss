@@ -1,4 +1,5 @@
 /* IMPORTANT:   ALL OVER-RIDES OF FRAMEWORK STYLES GO ABOVE THE IMPORT LINE */
+$font-base-size: 1.5rem;
 $font_base_family: 'Aileron';
 $assets_path: './assets';
 @if str-index($font-base-family, 'Aileron') {

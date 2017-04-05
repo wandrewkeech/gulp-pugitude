@@ -41,10 +41,10 @@ quickly in your browser window (as soon as I fix the bug with running
 
 ## Issues
  - [ ] Build a comprehensive demo of `pug` features and use in the demo project
- - [ ] ~~Build a `sass` theme for the demo project (likely borrow from
+ - [x] ~~Build a `sass` theme for the demo project (likely borrow from
    http://www.jade-lang.com )~~ Use a framework like a normal person and
    do a tiny bit of work to demonstrate it and modify it
- - [ ] Get automatic refresh in browser with live-server working with `gulp`
+ - [ ] ~~Get automatic refresh in browser with live-server working with `gulp`~~
  - [x] Perhaps have an error-catching call back to prevent `gulp` from exiting on
    a `pug` rendering error, if the user saves with a typo (or other syntax
    problems)
@@ -52,6 +52,7 @@ quickly in your browser window (as soon as I fix the bug with running
    other people to try the setup out
 
 ## Deps and Links
+ - [Vanilla Framework](https://docs.vanilla-framework.io)
  - [Gulp](https://www.npmjs.com/package/gulp)
  - [Live Server](https://www.npmjs.com/package/live-server)
  - [Pug](http://www.jade-lang.com)
