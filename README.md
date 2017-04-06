@@ -35,9 +35,9 @@ Generating the demo content is done with a straight-forward
 ```
 which should build all the content first (which automatically mirrors the
 structure of your source directory tree), watch all source directories, fire up
-`live-server`, and open your browser. Updates will appear automatically and very
+`live-server`, and open your browser. Updates ~~will appear automatically and very
 quickly in your browser window (as soon as I fix the bug with running
-`live-server` from within `gulp`).
+`live-server` from within `gulp`)~~ need to be revealed manually on reload.
 
 ## Issues
  - [ ] Build a comprehensive demo of `pug` features and use in the demo project
