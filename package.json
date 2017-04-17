@@ -4,7 +4,6 @@
   "description": "Easy Static Site Builder with Pug (Jade), Sass, and Live-Server",
   "main": "gulpfile.js",
   "dependencies": {
-    "gulp": "^3.9.1",
     "gulp-clean-css": "^3.0",
     "gulp-concat": "^2.6.0",
     "gulp-dest": "^0.2.3",
@@ -39,6 +38,8 @@
   },
   "homepage": "https://github.com/wandrewkeech/gulp-pugitude#readme",
   "devDependencies": {
+    "gulp": "github:gulpjs/gulp#4.0",
     "vanilla-framework": "^1.1.11"
-  }
+  },
+  "optionalDependencies": {}
 }

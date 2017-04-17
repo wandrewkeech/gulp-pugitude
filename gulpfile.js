@@ -19,7 +19,7 @@ var liveServerParams = {
     wait: 200,
 };
 
-gulp.task('pug', function(){
+gulp.task('pug', function(done){
     return gulp.src('./src/pug/**/*.pug')
         .pipe(gulpPug({
             filename: ".pug",
@@ -28,9 +28,10 @@ gulp.task('pug', function(){
         }))                // 'extends', etc. calls to other files in the build tree.
         .on('error', swallowError)
         .pipe(gulp.dest('./build/html/'));
+        done();
 });
 
-gulp.task('javascript', function(){
+gulp.task('javascript', function(done){
     gulp.src('./src/js/**/*.js')
         .pipe(concat('app.js'))
         .on('error', swallowError)
@@ -39,9 +40,10 @@ gulp.task('javascript', function(){
         .on('error', swallowError)
         .pipe(rename({suffix: '.min'}))
         .pipe(gulp.dest('./build/html/js/'));
+        done();
 });
 
-gulp.task('sass', function(){
+gulp.task('sass', function(done){
     return gulp.src('./src/scss/**/*.scss')
         .pipe(sass({includePaths:['./node_modules/']}))
         .on('error', sass.logError)
@@ -49,14 +51,15 @@ gulp.task('sass', function(){
         .pipe(cleancss())
         .pipe(rename({suffix: '.min'}))
         .pipe(gulp.dest('./build/html/css/'));
+        done();
 });
 
-gulp.task('default', ['pug', 'javascript', 'sass'], function () {
+gulp.task('default', gulp.parallel('pug', 'javascript', 'sass', function () {
     gulp.watch('./src/pug/**/*.pug', ['pug']);
     gulp.watch('./src/js/**/*.js', ['javascript']);
     gulp.watch('./src/scss/*.scss', ['sass']);
-    liveServer.start(liveServerParams); // As replacement for using the gulp.task('live-server')
-});
+    liveServer.start(liveServerParams);
+}));
 
 function swallowError(error){
     console.log(error.toString());
